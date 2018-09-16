@@ -93,6 +93,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
+  //add alt to pictures
+  const altPicture = document.getElementById('restaurant-img');
+  altPicture.alt = restaurant.name;
+
   // fill operating hours
   if (restaurant.operating_hours) {
     fillRestaurantHoursHTML();
