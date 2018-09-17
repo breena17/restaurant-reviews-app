@@ -53,6 +53,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #footer p {
   color:white;
+  padding: 10px;
+  margin: 0px;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -71,6 +73,7 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: .625em;
   text-transform: uppercase;
+  padding: 15px;
 }
 #breadcrumb {
     padding: 10px 40px 16px;
