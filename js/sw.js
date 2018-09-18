@@ -1,4 +1,4 @@
-var cacheVersion = 'restaurant-reviews-v13';
+var cacheVersion = 'restaurant-reviews-v15';
 
 const cacheFiles = [
     '/',
@@ -30,15 +30,30 @@ self.addEventListener('install', function(event) {
         })
     );
 });
-/*
-self.addEventListener('fetch', function() {
-    console.log('Fetching');
-    event.respondWith(fetch(event.request)
+
+self.addEventListener('fetch', function(event) {
+    event.respondWith(caches.match(event.request)
         .then(function(response) {
-            if(response) return response;
-            return fetch(event.request);
+            if(response) { 
+                return response;
+            }
+            else {
+                //if request doesn't exist in cache, fetch and add to cache
+                return fetch(event.request)
+                .then(function(response) {
+                    const cloneResponse = response.clone();
+                    caches.open(cacheVersion).then(function(cache) {
+                        cache.put(event.request, cloneResponse);
+                    })
+                    return response;
+                })
+                .catch(function() {
+                    console.log('Error');
+                });
+            }
         })
     );
 });
-console.log('aye carumba');
-*/
+
+//https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-4-service-workers/
+//helped me debug service worker, array for urls to cache and fetch event
