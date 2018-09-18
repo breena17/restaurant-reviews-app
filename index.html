@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta charset="utf-8"> 
 <head>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
@@ -40,8 +41,17 @@
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
-
-
+  
+  <!--How to add a service worker to your app google tutorial -https://developers.google.com/web/fundamentals/codelabs/offline/
+  <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker
+                 .register('js/sw.js')
+                 .then(function() { console.log("Service Worker Registered"); })
+                 .catch(function() {console.log('Service Worker Not Registered');});
+      };
+      </script>
+  -->
   <footer id="footer">
       <p>Copyright (c) 2018 <a href="/" aria-label="Restaurant Reviews" aria-role="link"><strong style="padding:10px;">Restaurant Reviews</strong></a> All Rights Reserved.</p>
   </footer>

@@ -214,3 +214,11 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+//how to add a service worker to your app google tutorial https://developers.google.com/web/fundamentals/codelabs/offline/
+//register service worker
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('js/sw.js')
+           .then(function() { console.log("Service Worker Registered"); })
+           .catch(function() {console.log('Service Worker Not Registered');});
+};
