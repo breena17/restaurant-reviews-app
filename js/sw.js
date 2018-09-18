@@ -1,4 +1,4 @@
-var cacheVersion = 'restaurant-reviews-v15';
+var cacheVersion = 'restaurant-reviews-v19';
 
 const cacheFiles = [
     '/',
