@@ -1,4 +1,4 @@
-var cacheVersion = 'restaurant-reviews-v19';
+var cacheVersion = 'restaurant-reviews-v20';
 
 const cacheFiles = [
     '/',
@@ -30,6 +30,10 @@ self.addEventListener('install', function(event) {
         })
     );
 });
+
+self.addEventListener('activate', function(event) {
+    console.log('Service Worker Active');
+  });
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(caches.match(event.request)

@@ -109,12 +109,12 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 400px;
+  height: 100%;
   width: 100%;
   background-color: #ccc;
 }
 #map-container {
-  height: 400px;
+  min-height: 400px;
   width: 100%;
 }
 /* ====================== Restaurant Filtering ====================== */
@@ -244,7 +244,7 @@ nav h1 a {
   position: relative;
   width: 100%;
   order: -1;
-  padding-top: 135px;
+  padding-top: 131px;
 }
 .inside #map {
   background-color: #ccc;
@@ -331,7 +331,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
